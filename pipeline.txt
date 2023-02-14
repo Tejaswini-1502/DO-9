@@ -3,14 +3,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dir('C:/Users/user/Documents/DevOps'){
+                dir('C:/Users/user/Documents/DevOps/9'){
                     bat 'docker build -t prog9 .'
                 }
             }
         }
         stage('Run') {
             steps {
-                dir('C:/Users/user/Documents/DevOps') {
+                dir('C:/Users/user/Documents/DevOps/9') {
                     bat 'docker run prog9'
                 }
             }
