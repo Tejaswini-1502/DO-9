@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                dir('C:/Users/user/Documents/DevOps'){
+                    bat 'docker build -t prog9 .'
+                }
+            }
+        }
+        stage('Run') {
+            steps {
+                dir('C:/Users/user/Documents/DevOps') {
+                    bat 'docker run prog9'
+                }
+            }
+        }
+    }
+}
